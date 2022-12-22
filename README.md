@@ -140,10 +140,6 @@ Data columns (total 5 columns):
  ```
 
 
-
-
-
-
 The `characters` table has \$56 \$ rows and \$5\$ columns. Every
 **movie\_title** has a **release\_date**, a **hero**, a **villian** and
 a **song**. However, we can see that some movies do not have a **hero**,
@@ -277,6 +273,9 @@ on the average of total gross.
     Adventure in genre have the highest avergae total_gross of 127047050.02325581
     Documentary in genre have the lowest avergae total_gross of 11292851.1875
 ```
+<p align="center" width="100%">
+    <img width="70%" src="/plots/visualization.svg"> 
+    
 
 It turns out that Adventure has the highest average total gross followed
 by Action and Musical genres.
@@ -292,7 +291,10 @@ over the years.
     Musical in genre have the highest avergae inflation_adjusted_gross of 603597861.0
     Documentary in genre have the lowest avergae inflation_adjusted_gross of 12718026.125
 ```
-
+<p align="center" width="100%">
+    <img width="70%" src="/plots/visualization-2.svg"> 
+    
+    
 After inflation, It turns out that Musical has the highest average total
 gross after inflation followed by Aventure and Action genres. There is a
 drastic difference between the Musical and Adventure genres in the
@@ -357,7 +359,10 @@ hero based on the total gross revenue.
     Simba in hero have the highest avergae total_gross of 422780140.0
     Aurora in hero have the lowest avergae total_gross of 9464608.0
 ```
-
+<p align="center" width="100%">
+    <img width="70%" src="/plots/visualization-3.svg"> 
+    
+    
 The plot shows that Simba is the most famous hero followed by Elsa. We
 can see a minor difference in total gross between the heroes.
 
@@ -371,7 +376,10 @@ after inflation to explore more.
     Snow White in hero have the highest avergae inflation_adjusted_gross of 5228953251.0
     Winnie the Pooh in hero have the lowest avergae inflation_adjusted_gross of 14187934.5
 ```
-
+<p align="center" width="100%">
+    <img width="70%" src="/plots/visualization-4.svg"> 
+    
+    
 After inflation, it turns out that Snow White is the most famous Disney
 hero with a major difference compared to other heroes. These results
 contradict our prediction, but they can be explained by the publication
@@ -403,7 +411,10 @@ revenue using chart visualization.
     yearly_revenue
 ```
 
-
+<p align="center" width="100%">
+    <img width="70%" src="/plots/visualization-5.svg"> 
+    
+    
 We can clearly see the linear increase in the total Disney revenue over
 the years. This chart alines with the idea that old characters would
 increase in revenue if have been developed and republished. The economic
