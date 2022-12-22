@@ -1,59 +1,22 @@
-::: {.jp-Cell .jp-MarkdownCell .jp-Notebook-cell}
-::: {.jp-Cell-inputWrapper}
-::: {.jp-Collapser .jp-InputCollapser .jp-Cell-inputCollapser}
-:::
+# Exploratory data analysis of the Walt Disney company datasets
 
-::: {.jp-InputArea .jp-Cell-inputArea}
-::: {.jp-InputPrompt .jp-InputArea-prompt}
-:::
 
-::: {.jp-RenderedHTMLCommon .jp-RenderedMarkdown .jp-MarkdownOutput mime-type="text/markdown"}
-Exploratory data analysis of the Walt Disney company datasets[¶](#Exploratory-data-analysis-of-the-Walt-Disney-company-datasets){.anchor-link} {#Exploratory-data-analysis-of-the-Walt-Disney-company-datasets}
-==============================================================================================================================================
+#### Student: Rawan Alghamdi[¶]
 
-#### Student: Rawan Alghamdi[¶](#Student:-Rawan-Alghamdi){.anchor-link} {#Student:-Rawan-Alghamdi}
-:::
-:::
-:::
-:::
 
-::: {.jp-Cell .jp-MarkdownCell .jp-Notebook-cell}
-::: {.jp-Cell-inputWrapper}
-::: {.jp-Collapser .jp-InputCollapser .jp-Cell-inputCollapser}
-:::
-
-::: {.jp-InputArea .jp-Cell-inputArea}
-::: {.jp-InputPrompt .jp-InputArea-prompt}
-:::
-
-::: {.jp-RenderedHTMLCommon .jp-RenderedMarkdown .jp-MarkdownOutput mime-type="text/markdown"}
-Foreword[¶](#Foreword){.anchor-link} {#Foreword}
+Foreword
 ------------------------------------
 
 In this notebook, I will do some exploratory data analysis for the
-`Disney` dataset
-[1](https://data.world/kgarrett/disney-character-success-00-16). I will
+`Disney` dataset[1](https://data.world/kgarrett/disney-character-success-00-16). I will
 be using the tables provided to answer questions that could be of
 interest to several sectors and businesses.
-:::
-:::
-:::
-:::
 
-::: {.jp-Cell .jp-MarkdownCell .jp-Notebook-cell}
-::: {.jp-Cell-inputWrapper}
-::: {.jp-Collapser .jp-InputCollapser .jp-Cell-inputCollapser}
-:::
+Introduction
+--------------------------------------------------------------------
 
-::: {.jp-InputArea .jp-Cell-inputArea}
-::: {.jp-InputPrompt .jp-InputArea-prompt}
-:::
 
-::: {.jp-RenderedHTMLCommon .jp-RenderedMarkdown .jp-MarkdownOutput mime-type="text/markdown"}
-Introduction[¶](#Introduction){.anchor-link} {#Introduction}
-============================================
-
-Question(s) of interests[¶](#Question(s)-of-interests){.anchor-link} {#Question(s)-of-interests}
+Question(s) of interests
 --------------------------------------------------------------------
 
 In this analysis, I will be working with the collection of the `Disney`
@@ -67,22 +30,9 @@ shops and other places that want to increase their sales. I am expecting
 the **Musical** genre to be the most popular since Disney is knowns for
 having many hits songs. And **Elsa** from the movie Frozen to be the
 most famous hero.
-:::
-:::
-:::
-:::
 
-::: {.jp-Cell .jp-MarkdownCell .jp-Notebook-cell}
-::: {.jp-Cell-inputWrapper}
-::: {.jp-Collapser .jp-InputCollapser .jp-Cell-inputCollapser}
-:::
 
-::: {.jp-InputArea .jp-Cell-inputArea}
-::: {.jp-InputPrompt .jp-InputArea-prompt}
-:::
-
-::: {.jp-RenderedHTMLCommon .jp-RenderedMarkdown .jp-MarkdownOutput mime-type="text/markdown"}
-Dataset description[¶](#Dataset-description){.anchor-link} {#Dataset-description}
+Dataset description
 ----------------------------------------------------------
 
 The Walt Disney Company is a multimedia entertainment company based in
@@ -121,63 +71,20 @@ tables as follow:
     > Disney Consumer Products revenue, the Disney Interactive revenue,
     > the Walt Disney Parks and Resorts revenue, the Disney Media
     > Networks revenue and the total revenue for each year.
-:::
-:::
-:::
-:::
 
-::: {.jp-Cell .jp-MarkdownCell .jp-Notebook-cell}
-::: {.jp-Cell-inputWrapper}
-::: {.jp-Collapser .jp-InputCollapser .jp-Cell-inputCollapser}
-:::
 
-::: {.jp-InputArea .jp-Cell-inputArea}
-::: {.jp-InputPrompt .jp-InputArea-prompt}
-:::
-
-::: {.jp-RenderedHTMLCommon .jp-RenderedMarkdown .jp-MarkdownOutput mime-type="text/markdown"}
-Methods and Results[¶](#Methods-and-Results){.anchor-link} {#Methods-and-Results}
+Methods and Results
 ==========================================================
 
 Since I am interested in finding the most popular genre of movies and
 heroes from each movie. I will be using both the total gross revenue and
 total gross post-inflation from the table `disney_movies_total_gross`.
-:::
-:::
-:::
-:::
 
-::: {.jp-Cell .jp-MarkdownCell .jp-Notebook-cell}
-::: {.jp-Cell-inputWrapper}
-::: {.jp-Collapser .jp-InputCollapser .jp-Cell-inputCollapser}
-:::
-
-::: {.jp-InputArea .jp-Cell-inputArea}
-::: {.jp-InputPrompt .jp-InputArea-prompt}
-:::
-
-::: {.jp-RenderedHTMLCommon .jp-RenderedMarkdown .jp-MarkdownOutput mime-type="text/markdown"}
 I will start by importing the tables and the libraries I will use for
 the analysis. Next, I will clean the data by removing unnecessary
 characters from the `disney-characters` data.
-:::
-:::
-:::
-:::
 
-::: {.jp-Cell .jp-CodeCell .jp-Notebook-cell .jp-mod-noOutputs}
-::: {.jp-Cell-inputWrapper}
-::: {.jp-Collapser .jp-InputCollapser .jp-Cell-inputCollapser}
-:::
-
-::: {.jp-InputArea .jp-Cell-inputArea}
-::: {.jp-InputPrompt .jp-InputArea-prompt}
-In \[1\]:
-:::
-
-::: {.jp-CodeMirrorEditor .jp-Editor .jp-InputArea-editor data-type="inline"}
-::: {.CodeMirror .cm-s-jupyter}
-::: {.highlight .hl-ipython3}
+```
     # Import the required libraries needed for this analysis
     import altair as alt
     import pandas as pd
@@ -190,87 +97,21 @@ In \[1\]:
         "data/disney_movies_total_gross.csv", parse_dates=["release_date"]
     )
     disney_revenue = pd.read_csv("data/disney_revenue_1991-2016.csv")
-:::
-:::
-:::
-:::
-:::
-:::
+ ```
 
-::: {.jp-Cell .jp-CodeCell .jp-Notebook-cell .jp-mod-noOutputs}
-::: {.jp-Cell-inputWrapper}
-::: {.jp-Collapser .jp-InputCollapser .jp-Cell-inputCollapser}
-:::
-
-::: {.jp-InputArea .jp-Cell-inputArea}
-::: {.jp-InputPrompt .jp-InputArea-prompt}
-In \[2\]:
-:::
-
-::: {.jp-CodeMirrorEditor .jp-Editor .jp-InputArea-editor data-type="inline"}
-::: {.CodeMirror .cm-s-jupyter}
-::: {.highlight .hl-ipython3}
+```
     # Clean the column 'movie_title' in the data characters
     characters = disney_characters.assign(
         movie_title=disney_characters["movie_title"].str.strip("\n")
     )
-:::
-:::
-:::
-:::
-:::
-:::
-
-::: {.jp-Cell .jp-MarkdownCell .jp-Notebook-cell}
-::: {.jp-Cell-inputWrapper}
-::: {.jp-Collapser .jp-InputCollapser .jp-Cell-inputCollapser}
-:::
-
-::: {.jp-InputArea .jp-Cell-inputArea}
-::: {.jp-InputPrompt .jp-InputArea-prompt}
-:::
-
-::: {.jp-RenderedHTMLCommon .jp-RenderedMarkdown .jp-MarkdownOutput mime-type="text/markdown"}
+```
 I will check what the characters table looks like and get some other
 information about it.
-:::
-:::
-:::
-:::
 
-::: {.jp-Cell .jp-CodeCell .jp-Notebook-cell}
-::: {.jp-Cell-inputWrapper}
-::: {.jp-Collapser .jp-InputCollapser .jp-Cell-inputCollapser}
-:::
+```characters.head()
+```
 
-::: {.jp-InputArea .jp-Cell-inputArea}
-::: {.jp-InputPrompt .jp-InputArea-prompt}
-In \[3\]:
-:::
-
-::: {.jp-CodeMirrorEditor .jp-Editor .jp-InputArea-editor data-type="inline"}
-::: {.CodeMirror .cm-s-jupyter}
-::: {.highlight .hl-ipython3}
-    characters.head()
-:::
-:::
-:::
-:::
-:::
-
-::: {.jp-Cell-outputWrapper}
-::: {.jp-Collapser .jp-OutputCollapser .jp-Cell-outputCollapser}
-:::
-
-::: {.jp-OutputArea .jp-Cell-outputArea}
-::: {.jp-OutputArea-child}
-::: {.jp-OutputPrompt .jp-OutputArea-prompt}
-Out\[3\]:
-:::
-
-::: {.jp-RenderedHTMLCommon .jp-RenderedHTML .jp-OutputArea-output .jp-OutputArea-executeResult mime-type="text/html"}
-<div>
-
+```
       movie\_title                      release\_date   hero         villian      song
   --- --------------------------------- --------------- ------------ ------------ ------------------------------
   0   Snow White and the Seven Dwarfs   1937-12-21      Snow White   Evil Queen   Some Day My Prince Will Come
@@ -278,47 +119,12 @@ Out\[3\]:
   2   Fantasia                          1940-11-13      NaN          Chernabog    NaN
   3   Dumbo                             1941-10-23      Dumbo        Ringmaster   Baby Mine
   4   Bambi                             1942-08-13      Bambi        Hunter       Love Is a Song
+```
 
-</div>
-:::
-:::
-:::
-:::
-:::
-
-::: {.jp-Cell .jp-CodeCell .jp-Notebook-cell}
-::: {.jp-Cell-inputWrapper}
-::: {.jp-Collapser .jp-InputCollapser .jp-Cell-inputCollapser}
-:::
-
-::: {.jp-InputArea .jp-Cell-inputArea}
-::: {.jp-InputPrompt .jp-InputArea-prompt}
-In \[4\]:
-:::
-
-::: {.jp-CodeMirrorEditor .jp-Editor .jp-InputArea-editor data-type="inline"}
-::: {.CodeMirror .cm-s-jupyter}
-::: {.highlight .hl-ipython3}
-    characters.info()
-:::
-:::
-:::
-:::
-:::
-
-::: {.jp-Cell-outputWrapper}
-::: {.jp-Collapser .jp-OutputCollapser .jp-Cell-outputCollapser}
-:::
-
-::: {.jp-OutputArea .jp-Cell-outputArea}
-::: {.jp-OutputArea-child}
-::: {.jp-OutputPrompt .jp-OutputArea-prompt}
-:::
-
-::: {.jp-RenderedText .jp-OutputArea-output mime-type="text/plain"}
-    <class 'pandas.core.frame.DataFrame'>
-    RangeIndex: 56 entries, 0 to 55
-    Data columns (total 5 columns):
+```characters.info()
+    ```
+    
+```Data columns (total 5 columns):
      #   Column        Non-Null Count  Dtype         
     ---  ------        --------------  -----         
      0   movie_title   56 non-null     object        
@@ -328,16 +134,14 @@ In \[4\]:
      4   song          47 non-null     object        
     dtypes: datetime64[ns](1), object(4)
     memory usage: 2.3+ KB
-:::
-:::
-:::
-:::
-:::
+    ```
 
-::: {.jp-Cell .jp-MarkdownCell .jp-Notebook-cell}
-::: {.jp-Cell-inputWrapper}
-::: {.jp-Collapser .jp-InputCollapser .jp-Cell-inputCollapser}
-:::
+
+
+
+
+
+
 
 ::: {.jp-InputArea .jp-Cell-inputArea}
 ::: {.jp-InputPrompt .jp-InputArea-prompt}
